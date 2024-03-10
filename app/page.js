@@ -1,23 +1,17 @@
-import Image from "next/image";
+import BackgroundReveal from "./ui/background";
+import Header from "./ui/header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
-      <Image
-        className="z-0 opacity-95"
-        src={"/rudi_background.jpg"}
-        alt="Background image of the cafe"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="centre"
-      />
-
-      <Image
-        className="relative z-1 text-4xl"
-        src={"/rudi_logo.png"}
-        width={750}
-        height={180}
-      />
+    <main className="flex flex-col">
+      <Header />
+      <BackgroundReveal />
+      <div className="h-screen overflow-hidden text-center">
+        <p>some text</p>
+      </div>
+      <div className="h-screen overflow-hidden text-center">
+        <p>some text</p>
+      </div>
     </main>
   );
 }
