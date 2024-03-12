@@ -10,8 +10,8 @@ export default function Home() {
       <Header />
       <BackgroundReveal />
 
-      {/* <AboutCard /> */}
-      {/* <ExploreButton className="exploreButton" /> */}
+      <AboutCard />
+      <ExploreButton className="exploreButton" />
 
       {/* Just to show how it would look */}
       {/* <div className="sandwichContainer" id="meatSandwiches">

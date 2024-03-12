@@ -117,7 +117,7 @@ export default function SideNav() {
           </motion.aside>
         )}
       </AnimatePresence>
-      <div className="fixed top-12 ml-8">
+      <div className="fixed top-14 ml-[5vw]">
         <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
           <RxHamburgerMenu size="2.5em" color="#FFDF00" />
         </Button>
