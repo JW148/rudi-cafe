@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 grid grid-cols-6 gap-4 backdrop-blur-md p-4 items-center">
+    <div className="sticky top-0 z-10 grid grid-cols-6 gap-4 backdrop-blur-md p-4 items-center">
       {/* <div className="">
         <SideNav />
        <RxHamburgerMenu size="2em" color="yellow" /> 
@@ -17,8 +17,8 @@ export default function Header() {
         <Image
           src={"/rudi_logo.png"}
           alt="Background image of the cafe"
-          width={230}
-          height={150}
+          width={200}
+          height={140}
         />
       </div>
     </div>

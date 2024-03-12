@@ -10,18 +10,16 @@ export default function Home() {
       <Header />
       <BackgroundReveal />
 
-      <AboutCard />
-      <ExploreButton className="exploreButton"/>
+      {/* <AboutCard /> */}
+      {/* <ExploreButton className="exploreButton" /> */}
 
-      
       {/* Just to show how it would look */}
-      <div className="sandwichContainer" id="meatSandwiches">
+      {/* <div className="sandwichContainer" id="meatSandwiches">
         <SandwichCard />
         <SandwichCard />
         <SandwichCard />
-      </div>
+      </div> */}
 
-      
       <div className="h-screen overflow-hidden text-center">
         <p>some text</p>
       </div>
