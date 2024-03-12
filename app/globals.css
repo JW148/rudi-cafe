@@ -2,4 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+.cardRadius{
+    border-radius: 30px;
+}
 
+.aboutSection{
+    @apply flex flex-col min-h-screen items-center px-4 sm:px-8 md:px-16 lg:px-72 xl:px-96 pt-4 sm:pt-8 md:pt-16 lg:pt-24 xl:pt-24;
+}
+
+.aboutHeader{
+    @apply font-thin text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12;
+}
+
+.cardBg{
+    @apply bg-black bg-opacity-80;
+}
+
+.cardTxt{
+    @apply font-thin text-white text-base md:text-lg lg:text-xl xl:text-2xl p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12;
+}
+
+.exploreLink{
+    @apply absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center cursor-pointer;
+}
+
+.exploreText{
+    @apply text-rudi-yellow text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold;
+}
+
+.exploreIcon{
+    @apply text-rudi-yellow text-lg sm:text-xl lg:text-2xl xl:text-4xl;
+}
+
+
+
+.sandwichContainer{
+    @apply grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-10 md:gap-8 sm:gap-6 gap-8 px-6 sm:px-8 md:px-10 lg:px-20;
+}
+
+.sandwichHeader{
+    @apply font-thin text-white text-lg md:text-xl lg:text-2xl xl:text-3xl underline decoration-1 underline-offset-8;
+}
