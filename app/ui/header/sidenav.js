@@ -48,7 +48,7 @@ export default function SideNav() {
     if (id === 1) {
       return (
         <motion.div
-          className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-48"
+          className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-12 md:mt-28"
           variants={itemVariants}
         >
           <motion.a key={id} href={to} whileHover={{ scale: 1.1 }}>
@@ -113,6 +113,21 @@ export default function SideNav() {
               exit="closed"
               variants={sideVariants}
             >
+              <motion.div className="flex justify-between items-center px-4 pt-4 md:px-8">
+                <Image
+                  src={"/rudi_logo.png"}
+                  alt="Rudi logo"
+                  width={160}
+                  height={120}
+                />
+                <Button
+                  isIconOnly
+                  className="bg-transparent"
+                  onClick={cycleOpen}
+                >
+                  <RxCross2 className="iconSize" />
+                </Button>
+              </motion.div>
               {links.map(({ name, to, id }, i) => renderItem(name, to, id))}
               <motion.div variants={itemVariants} className="mt-12 ml-24">
                 <Image
@@ -126,8 +141,21 @@ export default function SideNav() {
           </motion.aside>
         )}
       </AnimatePresence>
+      <AnimatePresence>
+        {!open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.6, duration: 0.3 } }}
+            className="flex items-center px-[5vw]"
+          >
+            <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
+              <RxHamburgerMenu className="iconSize" />
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div className="fixed w-full items-center top-14 px-[5vw]">
+      {/* <div className="fixed w-full items-center top-14 px-[5vw]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -161,7 +189,7 @@ export default function SideNav() {
             </Button>
           )}
         </motion.div>
-      </div>
+      </div> */}
     </>
   );
 }

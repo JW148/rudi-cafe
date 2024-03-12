@@ -6,7 +6,10 @@ import * as d3 from "d3";
 
 export default function BackgroundReveal() {
   //define a linear scale to translate scroll position into a range between 0 and 1
-  const scale = d3.scaleLinear().domain([0, window.innerHeight]).range([0, 1]);
+  const scale = d3
+    .scaleLinear()
+    .domain([100, window.innerHeight])
+    .range([0, 1]);
 
   //setup an event listener for scroll pos as soon as background component loaded
   const handleScroll = () => {
