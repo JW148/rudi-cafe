@@ -1,5 +1,5 @@
 import BackgroundReveal from "./ui/background";
-import Header from "./ui/header";
+import Header from "./ui/header/header";
 
 export default function Home() {
   return (

@@ -24,11 +24,6 @@ export default function BackgroundReveal() {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(scrollPos);
-    console.log(scale(scrollPos).toFixed(2));
-  }, [scrollPos]);
-
   return (
     <div className="fixed h-screen w-screen overflow-hidden -z-10">
       <Image
@@ -39,7 +34,7 @@ export default function BackgroundReveal() {
       />
       <Image
         style={{ opacity: scale(scrollPos).toFixed(2) }}
-        src={"/rudi_background_old.jpg"}
+        src={"/rudi_background_old_edited.jpg"}
         alt="Background image of the cafe"
         fill={true}
         objectFit="cover"
