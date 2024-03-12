@@ -51,7 +51,7 @@ export default function ExploreButton() {
       to="meatSandwiches"
       spy={true}
       smooth={true}
-      offset={-60}
+      offset={-175}
       duration={500}
       onClick={handleClick}
     >
