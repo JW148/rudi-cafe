@@ -1,7 +1,14 @@
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
 import { Tooltip, Button, Image } from "@nextui-org/react";
+import dynamic from "next/dynamic";
+
+
+const ScrollLink = dynamic(() => import('react-scroll').then((module) => module.Link), {
+  ssr: false,
+});
 
 export default function SideNav() {
   const links = [
@@ -34,12 +41,13 @@ export default function SideNav() {
     open: { opacity: 1 },
   };
   const [open, cycleOpen] = useCycle(false, true);
+  
 
   function renderItem(name, to, id) {
     if (id === 1) {
       return (
         <motion.div
-          className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-40"
+          className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-48"
           variants={itemVariants}
         >
           <motion.a key={id} href={to} whileHover={{ scale: 1.1 }}>
@@ -117,10 +125,34 @@ export default function SideNav() {
           </motion.aside>
         )}
       </AnimatePresence>
-      <div className="fixed top-12 ml-8">
-        <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
-          <RxHamburgerMenu size="2.5em" color="#FFDF00" />
-        </Button>
+
+      <div className="fixed justify-between items-center left-0 right-0 px-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          transition={{ duration: 0.2 }}
+        >
+          {open ? (
+            <div className="flex justify-between items-center w-full">
+              <ScrollLink to="aboutCard" spy={true} smooth={true} offset={-150} duration={500} onClick={cycleOpen}>
+                <Image
+                  src={"/rudi_logo.png"}
+                  alt="Rudi logo"
+                  width={160}
+                  height={120}
+                />
+              </ScrollLink>
+              <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
+                <RxCross2 className="iconSize"/>
+              </Button>
+            </div>
+          ) : (
+            <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
+              <RxHamburgerMenu className="iconSize top-8"/>
+            </Button>
+          )}
+        </motion.div>
       </div>
     </>
   );

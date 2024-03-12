@@ -3,7 +3,7 @@ import {Card, CardHeader, CardBody} from "@nextui-org/react";
 
 export default function AboutCard() {
   return (
-    <section className="aboutSection">
+    <section className="aboutSection" id="aboutCard">
         <Card className="cardBg cardRadius">
             <CardHeader className="flex justify-center gap-3 aboutHeader">
                 About

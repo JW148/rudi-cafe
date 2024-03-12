@@ -47,7 +47,7 @@ export default function ExploreButton() {
     }, []); 
     
   return (
-    <ScrollLink to="meatSandwiches" spy={true} smooth={true} offset={-60} duration={500} onClick={handleClick}>
+    <ScrollLink to="meatSandwiches" spy={true} smooth={true} offset={-175} duration={500} onClick={handleClick}>
         <div className="exploreLink" style={{ marginTop: `${initialScreenHeight - 100} px` }}> 
         <span className="exploreText">Explore</span>
         <FaChevronDown className="exploreIcon" />

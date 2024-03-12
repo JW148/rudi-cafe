@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-10 grid grid-cols-6 gap-4 backdrop-blur-md p-4 items-center">
+    <div className="sticky top-0 z-10 grid grid-cols-6 gap-4 backdrop-blur-md p-4 items-center" id="headerNav">
       {/* <div className="">
         <SideNav />
        <RxHamburgerMenu size="2em" color="yellow" /> 
