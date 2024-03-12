@@ -127,7 +127,7 @@ export default function SideNav() {
         )}
       </AnimatePresence>
 
-      <div className="fixed justify-between items-center left-0 right-0 px-12">
+      <div className="fixed w-full items-center top-14 px-[5vw]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -135,7 +135,7 @@ export default function SideNav() {
           transition={{ duration: 0.2 }}
         >
           {open ? (
-            <div className="flex justify-between items-center w-full">
+            <div className="flex justify-between items-center">
               <ScrollLink
                 to="aboutCard"
                 spy={true}
@@ -157,7 +157,7 @@ export default function SideNav() {
             </div>
           ) : (
             <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
-              <RxHamburgerMenu className="iconSize top-8" />
+              <RxHamburgerMenu className="iconSize" />
             </Button>
           )}
         </motion.div>

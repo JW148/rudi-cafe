@@ -17,8 +17,8 @@ export default function Header() {
         <Image
           src={"/rudi_logo.png"}
           alt="Background image of the cafe"
-          width={200}
-          height={140}
+          width={180}
+          height={120}
         />
       </div>
     </div>
