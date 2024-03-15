@@ -48,11 +48,11 @@ export default function ExploreButton() {
 
   return (
     <ScrollLink
-      to="meatSandwiches"
+      to="section3"
       spy={true}
       smooth={true}
       offset={-175}
-      duration={500}
+      duration={2500}
       onClick={handleClick}
     >
       <div

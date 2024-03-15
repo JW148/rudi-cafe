@@ -154,42 +154,6 @@ export default function SideNav() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* <div className="fixed w-full items-center top-14 px-[5vw]">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.5 }}
-          transition={{ duration: 0.2 }}
-        >
-          {open ? (
-            <div className="flex justify-between items-center">
-              <ScrollLink
-                to="aboutCard"
-                spy={true}
-                smooth={true}
-                offset={-150}
-                duration={500}
-                onClick={cycleOpen}
-              >
-                <Image
-                  src={"/rudi_logo.png"}
-                  alt="Rudi logo"
-                  width={160}
-                  height={120}
-                />
-              </ScrollLink>
-              <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
-                <RxCross2 className="iconSize" />
-              </Button>
-            </div>
-          ) : (
-            <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
-              <RxHamburgerMenu className="iconSize" />
-            </Button>
-          )}
-        </motion.div>
-      </div> */}
     </>
   );
 }

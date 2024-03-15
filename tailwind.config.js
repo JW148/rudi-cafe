@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         "rudi-yellow": "#FFDE00",
         "rudi-green": "#445A29",
+        "rudi-red": "#FF0000",
       },
     },
   },
