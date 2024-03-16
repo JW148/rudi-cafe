@@ -4,7 +4,7 @@ export default function Section5() {
   return (
     <section
       id="section5"
-      className=""
+      className="bg-gradient-to-t from-rudi-green via-rudi-green"
     >
       <Footer />
     </section>
