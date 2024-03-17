@@ -16,7 +16,7 @@ export default function Section4() {
       <div className="flex justify-center">
         <Image
           style={{ objectFit: "cover" }}
-          src={"/menu.png"}
+          src={"/menu.PNG"}
           alt="Food & Drink Menu"
           className="relative z-0 self-center justify-self-center shadow-2xl"
           height={500}
