@@ -14,10 +14,10 @@ const ScrollLink = dynamic(
 
 export default function SideNav() {
   const links = [
-    { name: "About", to: "#", id: 1 },
-    { name: "Sandwiches", to: "#", id: 2 },
-    { name: "Menu", to: "#", id: 3 },
-    { name: "Contact", to: "#", id: 4 },
+    { name: "About", to: "#section1", id: 1 },
+    { name: "Sandwiches", to: "#section3", id: 2 },
+    { name: "Menu", to: "#section4", id: 3 },
+    { name: "Contact", to: "#section5", id: 4 },
   ];
 
   //used to stagger the links as they appear with the sidenav
@@ -51,7 +51,12 @@ export default function SideNav() {
           className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-12 md:mt-28"
           variants={itemVariants}
         >
-          <motion.a key={id} href={to} whileHover={{ scale: 1.1 }}>
+          <motion.a
+            key={id}
+            href={to}
+            whileHover={{ scale: 1.1 }}
+            onClick={cycleOpen}
+          >
             {name}
           </motion.a>
           <Image
@@ -69,7 +74,12 @@ export default function SideNav() {
           className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-12"
           variants={itemVariants}
         >
-          <motion.a key={id} href={to} whileHover={{ scale: 1.1 }}>
+          <motion.a
+            key={id}
+            href={to}
+            whileHover={{ scale: 1.1 }}
+            onClick={cycleOpen}
+          >
             {name}
           </motion.a>
           <Image
@@ -87,7 +97,12 @@ export default function SideNav() {
           className="flex flex-row font-semibold text-green-50 text-4xl ml-12 mt-12"
           variants={itemVariants}
         >
-          <motion.a key={id} href={to} whileHover={{ scale: 1.1 }}>
+          <motion.a
+            key={id}
+            href={to}
+            whileHover={{ scale: 1.1 }}
+            onClick={cycleOpen}
+          >
             {name}
           </motion.a>
         </motion.div>

@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-center text-rudi-yellow">&copy;</p>
+      <p className="text-center text-rudi-yellow">&copy;GANARIN LTD 2024</p>
     </div>
   );
 }
