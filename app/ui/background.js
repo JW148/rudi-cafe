@@ -3,21 +3,23 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import * as d3 from "d3";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import useDeviceSize from "../lib/deviceSize";
 
 export default function BackgroundReveal() {
+  //uses custom hook to get the height of the device
   //the height of sections 1 and 3 are euqal to the height of the viewport
   //section 2 is equivalent to 1.5 the height of the viewport
-  const sectionHeight = window.innerHeight;
+  const [width, height] = useDeviceSize();
 
   const backgroundScale = d3
     .scaleLinear()
-    .domain([sectionHeight, sectionHeight * 2.5])
+    .domain([height, height * 2.5])
     .range([0, 1]);
 
   const yearScale = d3
     .scaleLinear()
-    .domain([sectionHeight - 500, sectionHeight * 1.5 + 370])
+    .domain([height - 500, height * 1.5 + 370])
     .range([2024, 1992]);
 
   //setup an event listener for scroll pos as soon as background component loaded
@@ -53,19 +55,21 @@ export default function BackgroundReveal() {
   return (
     <div className="fixed h-screen w-screen overflow-hidden -z-10">
       <Image
+        style={{
+          objectFit: "cover",
+        }}
         src={"/rudi_background_edited.jpg"}
         alt="Background image of the cafe"
         fill={true}
-        objectFit="cover"
       />
       <Image
         style={{
           opacity: backgroundScale(scrollPos + 500),
+          objectFit: "cover",
         }}
         src={"/rudi_background_old_edited.jpg"}
         alt="Background image of the cafe"
         fill={true}
-        objectFit="cover"
       />
       <AnimatePresence>
         {open && (
@@ -82,9 +86,6 @@ export default function BackgroundReveal() {
             <motion.span class="bg-clip-text text-transparent bg-gradient-to-r from-rudi-yellow to-orange-100">
               {Math.round(yearScale(scrollPos))}
             </motion.span>
-            {/* <motion.p className="text-center font-semibold text-transparent text-5xl ">
-              {Math.round(yearScale(scrollPos))}
-            </motion.p> */}
           </motion.div>
         )}
       </AnimatePresence>
