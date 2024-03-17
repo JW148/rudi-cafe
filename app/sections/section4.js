@@ -13,7 +13,7 @@ export default function Section4() {
       <div className="flex justify-center">
         <Image
           src={"/menu.png"}
-          alt="Rudi logo"
+          alt="Food & Drink Menu"
           objectFit="cover"
           className="relative z-0 self-center justify-self-center shadow-2xl"
         />
