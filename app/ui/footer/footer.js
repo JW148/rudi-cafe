@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { FaFacebook } from "react-icons/fa";
 import ContactForm from "./contact-form";
 import { Divider } from "@nextui-org/react";
 

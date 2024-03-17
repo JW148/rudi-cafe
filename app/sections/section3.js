@@ -14,8 +14,9 @@ export default function Section3() {
       </div>
       <div className="sandwichContainer">
         {sandwichData &&
-          sandwichData.map((el) => (
+          sandwichData.map((el, index) => (
             <SandwichCard
+              key={index}
               name={el.name}
               icon={el.icon}
               desc={el.desc}
