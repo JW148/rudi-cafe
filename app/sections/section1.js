@@ -8,7 +8,7 @@ export default function Section1() {
       className="h-screen flex items-center justify-center"
     >
       <AboutCard />
-      <ExploreButton className="exploreButton" />
+      <ExploreButton />
     </section>
   );
 }

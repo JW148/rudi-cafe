@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
+import useDeviceSize from "@/app/lib/deviceSize";
 
 // Dynamic import fr hydation for React Scroll
 import dynamic from "next/dynamic";
@@ -14,54 +16,29 @@ const ScrollLink = dynamic(
 );
 
 export default function ExploreButton() {
-  // get initial screen height of the respective window
-  const [initialScreenHeight, setInitialScreenHeight] = useState(0);
-
-  //states for clicking nav bar icons
-  const [clicked, setClicked] = useState(false);
-
-  //function for when nav bar icons are clicked
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
-
-  useEffect(() => {
-    // Function to handle window resize events
-    const handleResize = () => {
-      // Update the initial screen height state with the current inner height of the window
-      setInitialScreenHeight(window.innerHeight);
-    };
-
-    // Add an event listener for the 'resize' event, calling handleResize function
-    window.addEventListener("resize", handleResize);
-
-    // Perform initial calculation of screen height on component mount
-    handleResize();
-
-    // Cleanup function to remove the event listener when the component unmounts or the dependency array changes
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-    // Empty dependency array ensures the effect runs only once, on component mount
-  }, []);
+  const [width, height] = useDeviceSize();
 
   return (
-    <ScrollLink
-      to="section3"
-      spy={true}
-      smooth={true}
-      offset={-175}
-      duration={2500}
-      onClick={handleClick}
+    <motion.div
+      className="absolute bottom-[5%] items-center justify-items-center justify-center cursor-pointer"
+      animate={{ y: [0, 30, 0] }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut",
+        repeatDelay: 0.3,
+      }}
     >
-      <div
-        className="exploreLink"
-        style={{ marginTop: `${initialScreenHeight - 100} px` }}
+      <ScrollLink
+        to="section3"
+        spy={true}
+        smooth={true}
+        offset={-height * 0.2}
+        duration={2500}
       >
         <span className="exploreText">Explore</span>
-        <FaChevronDown className="exploreIcon" />
-      </div>
-    </ScrollLink>
+        <FaChevronDown className="text-rudi-yellow mx-auto" />
+      </ScrollLink>
+    </motion.div>
   );
 }
