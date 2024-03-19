@@ -60,6 +60,7 @@ export default function SideNav() {
             {name}
           </motion.a>
           <Image
+            priority={true}
             className="ml-12"
             src={"/plain_dark.png"}
             alt="Background image of the cafe"
@@ -83,6 +84,7 @@ export default function SideNav() {
             {name}
           </motion.a>
           <Image
+            priority={true}
             className="ml-12"
             src={"/muffa_dark.png"}
             alt="Background image of the cafe"
@@ -130,6 +132,7 @@ export default function SideNav() {
             >
               <motion.div className="flex justify-between items-center px-4 pt-4 md:px-8">
                 <Image
+                  priority={true}
                   src={"/rudi_logo.png"}
                   alt="Rudi logo"
                   width={160}
@@ -146,6 +149,7 @@ export default function SideNav() {
               {links.map(({ name, to, id }, i) => renderItem(name, to, id))}
               <motion.div variants={itemVariants} className="mt-12 ml-24">
                 <Image
+                  priority={true}
                   src={"/baguete_dark.png"}
                   alt="Background image of the cafe"
                   width={100}

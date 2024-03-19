@@ -21,7 +21,7 @@ export default function SandwichCard({ name, icon, desc, type }) {
                 height={80}
               />
 
-              <p className="flex text-wrap text-center text-rudi-yellow text-xl font-light pt-2 md:text-3xl  ">
+              <p className="flex text-wrap text-center text-rudi-yellow text-xl font-normal pt-2 md:text-3xl  ">
                 {name}
               </p>
             </div>

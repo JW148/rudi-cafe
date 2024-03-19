@@ -61,6 +61,7 @@ export default function BackgroundReveal() {
         src={"/rudi_background_edited.jpg"}
         alt="Background image of the cafe"
         fill={true}
+        priority={true}
       />
       <Image
         style={{

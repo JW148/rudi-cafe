@@ -19,6 +19,7 @@ export default function Header() {
           alt="Background image of the cafe"
           width={180}
           height={120}
+          priority={true}
         />
       </div>
     </div>
