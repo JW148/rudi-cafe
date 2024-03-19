@@ -12,11 +12,11 @@ export default function AboutCard() {
       </CardHeader>
       <CardBody>
         <p className="text-rudi-yellow text-base text-center md:text-lg lg:text-xl xl:text-2xl p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12">
-          Rudi's! Your neighbourhood's family-run business, stationed in the
-          heart of Edinburgh. We've been serving the bustling local community
-          and curious passers-by since 1993 with a selection of homemade deli
-          sandwiches, toasties, soup, treats and Italian coffee to go. Come in
-          and say hello or discover more below!
+          Rudi&apos;s! Your neighbourhood&apos;s family-run business, stationed
+          in the heart of Edinburgh. We&apos;ve been serving the bustling local
+          community and curious passers-by since 1993 with a selection of
+          homemade deli sandwiches, toasties, soup, treats and Italian coffee to
+          go. Come in and say hello or discover more below!
         </p>
       </CardBody>
     </Card>
