@@ -22,7 +22,7 @@ export default function Footer() {
             OPENING TIMES
           </p>
           <p className="text-rudi-yellow font-bold xl:text-base lg:text-lg md:text-xl sm:text-2xl">
-            Monday - Friday, 8:30&nbsp;am – 2&nbsp;pm
+            Monday - Friday, 9:00&nbsp;am – 2&nbsp;pm
           </p>
           <p className="text-rudi-yellow font-bold xl:text-base lg:text-lg md:text-xl sm:text-2xl">
             Saturday&nbsp;-&nbsp;Sunday&nbsp;,&nbsp;Closed
