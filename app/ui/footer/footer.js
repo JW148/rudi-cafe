@@ -35,11 +35,13 @@ export default function Footer() {
             </a>
           </p>
           <a
+            aria-label="Open a new Google maps tab with the cafe's location"
             href="https://maps.app.goo.gl/chSbtK8Q6XZTug6w5"
             target="_blank"
             className="shadow-xl rounded-md"
           >
             <iframe
+              title="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.2185268429166!2d-3.193568423106257!3d55.94558427315618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c784b14e4cfd%3A0xb951643a5bc547af!2s30%20Forrest%20Rd%2C%20Edinburgh%20EH1%202QN!5e0!3m2!1sen!2suk!4v1710509496469!5m2!1sen!2suk"
               width="100%"
               height="283"

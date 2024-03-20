@@ -175,7 +175,12 @@ export default function SideNav() {
             animate={{ opacity: 1, transition: { delay: 0.6, duration: 0.3 } }}
             className="flex items-center px-[5vw]"
           >
-            <Button isIconOnly className="bg-transparent" onClick={cycleOpen}>
+            <Button
+              isIconOnly
+              className="bg-transparent"
+              onClick={cycleOpen}
+              aria-label="Sidenav"
+            >
               <RxHamburgerMenu className="iconSize" />
             </Button>
           </motion.div>

@@ -6,7 +6,7 @@ export default function SandwichCard({ name, icon, desc, type }) {
     <>
       <Card
         isBlurred
-        className="backdrop-blur-md bg-black/25 rounded-3xl min-h-28"
+        className="backdrop-blur-xl bg-black/35 rounded-3xl min-h-28"
         shadow="lg"
       >
         <CardBody>
