@@ -17,8 +17,8 @@ export default function SandwichCard({ name, icon, desc, type }) {
                 layout="fill"
                 src={icon}
                 alt="Sandwich icon"
-                width={80}
-                height={80}
+                width={70}
+                height={40}
               />
 
               <p className="flex text-wrap text-center text-rudi-yellow text-xl font-normal pt-2 md:text-3xl  ">

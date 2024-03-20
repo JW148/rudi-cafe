@@ -58,8 +58,9 @@ export default function BackgroundReveal() {
         style={{
           objectFit: "cover",
         }}
-        src={"/rudi_background_edited.jpg"}
+        src={"/rudi_background_edited.webp"}
         alt="Background image of the cafe"
+        quality={50}
         fill={true}
         priority={true}
       />
@@ -68,9 +69,10 @@ export default function BackgroundReveal() {
           opacity: backgroundScale(scrollPos + 500),
           objectFit: "cover",
         }}
-        src={"/rudi_background_old_edited.jpg"}
+        src={"/rudi_background_old_edited.webp"}
         alt="Background image of the cafe"
         fill={true}
+        quality={50}
       />
       <AnimatePresence>
         {open && (

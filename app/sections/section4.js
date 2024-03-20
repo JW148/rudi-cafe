@@ -16,11 +16,12 @@ export default function Section4() {
       <div className="flex justify-center">
         <Image
           style={{ objectFit: "cover" }}
-          src={"/menu.PNG"}
+          src={"/menu.webp"}
           alt="Food & Drink Menu"
           className="relative z-0 self-center justify-self-center shadow-2xl"
           height={500}
           width={"auto"}
+          quality={10}
         />
       </div>
     </section>

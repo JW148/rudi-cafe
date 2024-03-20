@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex flex-row justify-center mb-10 overflow-hidden">
         <Divider className="align-middle self-center mx-auto w-[40%] h-[2px] bg-rudi-yellow hidden md:block " />
         <Image
-          src={"/rudi_logo.png"}
+          src={"/rudi_logo.webp"}
           alt="Rudi logo"
           width={120}
           height={100}

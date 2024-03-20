@@ -66,7 +66,7 @@ export default function SideNav() {
           <Image
             priority={true}
             className="ml-12"
-            src={"/plain_dark.png"}
+            src={"/plain_dark.webp"}
             alt="Background image of the cafe"
             width={80}
             height={80}
@@ -92,7 +92,7 @@ export default function SideNav() {
           <Image
             priority={true}
             className="ml-12"
-            src={"/muffa_dark.png"}
+            src={"/muffa_dark.webp"}
             alt="Background image of the cafe"
             width={80}
             height={80}
@@ -141,7 +141,7 @@ export default function SideNav() {
               <motion.div className="flex justify-between items-center px-4 pt-4 md:px-8">
                 <Image
                   priority={true}
-                  src={"/rudi_logo.png"}
+                  src={"/rudi_logo.webp"}
                   alt="Rudi logo"
                   width={160}
                   height={120}
@@ -158,7 +158,7 @@ export default function SideNav() {
               <motion.div variants={itemVariants} className="mt-12 ml-24">
                 <Image
                   priority={true}
-                  src={"/baguete_dark.png"}
+                  src={"/baguete_dark.webp"}
                   alt="Background image of the cafe"
                   width={100}
                   height={100}
